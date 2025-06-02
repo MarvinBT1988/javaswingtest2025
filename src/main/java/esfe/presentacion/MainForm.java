@@ -7,6 +7,7 @@ public class MainForm extends JFrame {
     private JPanel mainPanel;
     private User userAutenticate; // Declaración de una variable de instancia llamada 'userAutenticate' de tipo User. Esta variable se utilizará para almacenar la información del usuario que ha sido autenticado en el sistema.
 
+
     public MainForm(){
         setTitle("Sistema en java de escritorio"); // Establece el título de la ventana principal (JFrame).
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Configura la operación por defecto al cerrar la ventana para que la aplicación se termine.

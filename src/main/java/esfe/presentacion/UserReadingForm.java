@@ -45,12 +45,16 @@ public class UserReadingForm extends JDialog {
         btnCreate.addActionListener(s->{
             UserWriteForm userWriteForm=new UserWriteForm(this.mainForm, CUD.CREATE,new User());
             userWriteForm.setVisible(true);
+            DefaultTableModel emptyModel = new DefaultTableModel();
+            tableUsers.setModel(emptyModel);
         });
         btnUpdate.addActionListener(s->{
             User user = getUserFromTableRow();
             if(user != null){
                 UserWriteForm userWriteForm=new UserWriteForm(this.mainForm, CUD.UPDATE,user);
                 userWriteForm.setVisible(true);
+                DefaultTableModel emptyModel = new DefaultTableModel();
+                tableUsers.setModel(emptyModel);
             }
         });
         btnEliminar.addActionListener(s->{
@@ -58,6 +62,8 @@ public class UserReadingForm extends JDialog {
             if(user != null){
                 UserWriteForm userWriteForm=new UserWriteForm(this.mainForm, CUD.DELETE,user);
                 userWriteForm.setVisible(true);
+                DefaultTableModel emptyModel = new DefaultTableModel();
+                tableUsers.setModel(emptyModel);
             }
         });
     }
